@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    display: flex;
+    background: linear-gradient(rgba(20, 48, 56, 0.959),rgba(67, 70, 42, 0.959));    
+    /* background: linear-gradient(rgba(119, 213, 241, 0.959),rgba(219, 230, 123, 0.959),rgba(223, 130, 101, 0.959),rgba(9, 100, 44, 0.959),rgb(121, 61, 12));     */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container{
+    /* width: 50px;
+    height: 50px;
+    color: #fff; */
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+.flower1{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid #0f0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flower1 .obj:nth-child(1){
+    position: absolute;
+    left: 38%;
+    top:37%;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    /* transform: rotateX(45deg); */
+    border-radius: 50%;
+    /* border: 1px solid #fff; linear-gradient(#842ace, #842000); */
+    border-top-left-radius: 55px;
+    /* border-top-right-radius:55px;s */
+    background:linear-gradient(#d4204d, #ca0cb1);
+    animation: animatepetalleft 4s ease-in infinite;
+}
+.flower1 .obj:nth-child(2){
+    position: absolute;
+    left:56%;
+    top:37%;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    /* transform: rotateX(45deg); */
+    border-radius: 50%;
+    /* border: 1px solid #fff; linear-gradient(#842ace, #842000); */
+    border-top-right-radius: 55px;
+    /* border-top-right-radius:55px;s */
+    background:linear-gradient(#d4204d, #ca0cb1);
+    animation: animatepetalright 4s ease-in infinite;    
+}
+.flower1 .obj:nth-child(4){
+    position: absolute;
+    z-index: 1;
+    left: 38%;
+    top:55.5%;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    /* transform: rotateX(45deg); */
+    border-radius: 50%;
+    /* border: 1px solid #fff; linear-gradient(#842ace, #842000); */
+    border-bottom-left-radius: 55px;
+    /* border-top-right-radius:55px;s */
+    background:linear-gradient(#d4204d, #ca0cb1);
+    animation: animatepetalleft 4s ease-in infinite;
+}
+.flower1 .obj:nth-child(5){
+    position: absolute;
+    z-index: 1;
+    left:56%;
+    top:55.5%;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    /* transform: rotateX(45deg); */
+    border-radius: 50%;
+    /* border: 1px solid #fff; linear-gradient(#842ace, #842000); */
+    border-bottom-right-radius: 55px;
+    /* border-top-right-radius:55px;s */
+    background:linear-gradient(#d4204d, #ca0cb1);
+    animation: animatepetalright 4s ease-in infinite;
+}
+.flower1 .obj:nth-child(3){
+    position: absolute;
+    z-index: 2;
+    left:52%;
+    top:51.5%;
+    width:20px;
+    height: 20px;
+    border-radius:50%;
+    border: 1px solid #fff;
+    background-color: #ff0; 
+    animation: animatecenter 4s ease-in infinite;
+}
+.flower1 .obj:nth-child(6){
+    position: absolute;
+    left:50.4%;
+    top:65.5%;
+    width:10px;
+    height: 100px;
+    background-color: #0f0;
+    border-radius: 50%;
+    animation: animatestem 4s ease-in infinite;
+}
+.flower1 .obj:nth-child(7){
+    position: absolute;
+    left:51.5%;
+    top:69.5%;
+    width:55px;
+    height: 40px;
+    background-color: #0f0;
+    border-radius: 100px/250% 10px;
+    animation: animateleaf 4s ease-in infinite;
+}
+@keyframes animateleaf {
+    0%{
+        transform:rotateX(35deg);
+    }
+    50%{
+        transform:rotateX(60deg);
+    }
+    100%{
+        transform:rotateX(35deg);
+    }
+}
+@keyframes animatepetalleft {
+    0%{
+        left:37%;
+    }
+    50%{
+        left:39%;
+    }
+    100%{
+        left:37%;
+    }
+}
+@keyframes animatepetalright {
+    0%{
+        left:55%;
+    }
+    50%{
+        left:57%;
+    }
+    100%{
+        left:55%;
+    }
+}
+@keyframes animatecenter {
+    0%{
+        left:52%;
+    }
+    50%{
+        left:53%;
+    }
+    100%{
+        left:52%;
+    }
+}
+@keyframes animatestem {
+    0%{
+        transform:skew(-3deg);
+    }
+    50%{
+        transform:skew(-15deg);
+    }
+    100%{
+        transform:skew(-3deg);
+    }
+}

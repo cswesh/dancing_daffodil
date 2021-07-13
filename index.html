@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rotating Circle</title>
+</head>
+<body>
+    <div class="container">
+        <span class="flower1">
+            <span class="obj"></span>
+            <span class="obj"></span>
+            <span class="obj"></span>
+            <span class="obj"></span>
+            <span class="obj"></span>
+            <span class="obj"></span>
+            <span class="obj"></span>
+        </span>
+        
+        
+    </div>
+
+    <script>
+
+        //method 1 - random generate
+        // function replicate(){
+        //  
+        //  const container = document.querySelector('.container');
+        
+        // flower.style.top = Math.random() * innerHeight + "px"
+        // flower.style.left = Math.random() * innerWidth + "px"
+
+        // let burstClone = flower.cloneNode(false);
+        //     container.appendChild(burstClone);
+            
+        // }
+        
+        //setInterval(replicate,100);
+
+        //Method2
+        const container = document.querySelector('.container');
+        const flower = document.querySelector('.flower1');
+        const flower1 = document.querySelector('.flower1');
+        
+        
+        for(x=0; x<100;x++) {
+            flower.style.top = (Math.random() * innerHeight)/10000 + "px"
+            flower.style.left = (Math.random() * innerWidth)/10000 + "px"
+            flower1.style.margin = "-80px";
+            let burstClone = flower1.cloneNode(true);
+            container.appendChild(burstClone);
+        }
+    </script>
+</body>
+</html> 
